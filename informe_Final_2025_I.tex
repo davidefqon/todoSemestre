@@ -7,6 +7,12 @@
 \usepackage{float}
 \usepackage{pdfpages} 
 
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{enumitem}
+
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
 % Redefinir el nombre de la bibliografía
 
  
@@ -93,7 +99,58 @@ Para garantizar un desarrollo ágil y eficiente, el proyecto adoptará la metodo
 \end{table}
 \FloatBarrier
 
+\begin{table}[!htb]
+    \centering
+    \renewcommand{\arraystretch}{1.5}
 
+    \begin{tabularx}{\linewidth}{|p{0.30\linewidth}|Y|}
+        \hline
+
+        \textbf{Responsable de la actividad}
+        & David Brahyan Larota Pilco \\ \hline
+
+        \textbf{Objetivo de la actividad}
+        & Mejorar y documentar los requerimientos funcionales de la primera versión y los requerimientos no funcionales del sistema de gestión de proyectos para las tres subunidades de la Dirección de Proyección Social y Extensión Cultural. \\ \hline
+
+        \textbf{Tareas realizadas}
+        &
+        \begin{itemize}[nosep, leftmargin=*]
+            \item Reuniones con el equipo de Proyección Social.
+            \item Análisis de los procesos actuales de gestión.
+            \item Documentación de los requerimientos en el sistema.
+        \end{itemize}
+        \\ \hline
+
+        \textbf{Duración de la actividad}
+        & 6 semanas \\ \hline
+
+        \textbf{Fecha de inicio}
+        & 20/04/25 \\ \hline
+
+        \textbf{Fecha de culminación}
+        & 04/05/25 \\ \hline
+
+        \textbf{Materiales utilizados}
+        &
+        \begin{itemize}[nosep, leftmargin=*]
+            \item Laptop Huawei MateBook D16.
+            \item Visual Paradigm 16.2.
+        \end{itemize}
+        \\ \hline
+
+        \textbf{Resultados alcanzados}
+        & Documento de especificaciones de requerimientos finalizado. \\ \hline
+
+        \textbf{Porcentaje de avance}
+        & 100\% \\ \hline
+
+    \end{tabularx}
+
+    \caption{Resumen de la Actividad 1}
+    \label{tab:actividad1_1}
+\end{table}
+
+\FloatBarrier
 
 \subsubsection{Proceso de Recolección de Requerimientos}
 En la fase de requerimientos, se realizó una entrevista estructurada con los usuarios finales y otras partes interesadas clave, incluyendo al personal de la Dirección de Proyección Social. Este paso fue fundamental para garantizar que el software se desarrolle alineado con las 

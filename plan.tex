@@ -1,0 +1,289 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-nodecimaldot]{babel}
+\usepackage{lmodern}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{float}
+
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\hypersetup{colorlinks=true,linkcolor=black,urlcolor=blue}
+\setlength{\parindent}{1.25cm}
+\setlength{\parskip}{0.35em}
+\renewcommand{\arraystretch}{1.35}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcommand{\checkmarkx}{\textbf{X}}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Plan de Prácticas Pre Profesionales II}
+\rhead{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\begin{document}
+
+% --------------------------------------------------------------------------
+% PORTADA
+% --------------------------------------------------------------------------
+\begin{titlepage}
+\centering
+\thispagestyle{empty}
+
+{\Large\textbf{UNIVERSIDAD NACIONAL DEL ALTIPLANO}}\\[0.35cm]
+{\large\textbf{FACULTAD DE INGENIERÍA ELÉCTRICA, ELECTRÓNICA Y SISTEMAS}}\\[0.35cm]
+{\large\textbf{ESCUELA PROFESIONAL DE INGENIERÍA DE SISTEMAS}}\\[1.4cm]
+
+\begin{tikzpicture}
+  \draw[fill=green!55!black,draw=green!55!black] (0,0) circle (1.7cm);
+  \node[align=center,text=white,font=\bfseries\small] at (0,0)
+    {UNA\\PUNO};
+\end{tikzpicture}\\[1.2cm]
+
+{\Large\textbf{PLAN DE PRÁCTICAS PRE PROFESIONALES II}}\\[1.5cm]
+{\large\textbf{CENTRO DE PRÁCTICAS:}}\\[0.2cm]
+{\large Oficina de Dirección de Proyección Social y Extensión Cultural}\\[0.9cm]
+{\large\textbf{PRESENTADO POR:}}\\[0.2cm]
+{\large David Brahyan Larota Pilco}\\[0.9cm]
+{\large\textbf{DOCENTE:}}\\[0.2cm]
+{\large Dr. Pedro Feder Ponce Cordero}\\[0.9cm]
+{\large\textbf{SEMESTRE:} X \hspace{1.5cm} \textbf{GRUPO:} B}\\[1.2cm]
+
+{\large PUNO -- PERÚ}\\[1.5cm]
+
+\textbf{FIRMAS DE CONFORMIDAD DEL PLAN DE PRÁCTICAS}\
+\textbf{PRE PROFESIONALES II}\\[1cm]
+
+\begin{tabular}{>{\centering\arraybackslash}p{0.4\textwidth}>{\centering\arraybackslash}p{0.4\textwidth}}
+\rule{5cm}{0.4pt} & \rule{5cm}{0.4pt}\\
+David Brahyan Larota Pilco & Dra. Milder Zanabria Ortega\\
+Practicante preprofesional & Jefa de la unidad receptora
+\end{tabular}
+
+\vfill
+\textbf{Docente de prácticas preprofesionales}\\[0.7cm]
+\rule{6cm}{0.4pt}\\
+Dr. Pedro Feder Ponce Cordero
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+% --------------------------------------------------------------------------
+\section{Parte informativa}
+
+\begin{description}[style=multiline,leftmargin=4.5cm,labelwidth=4cm]
+  \item[1.1. Nombre del practicante:] David Brahyan Larota Pilco.
+  \item[1.2. Especialidad de prácticas:] Ingeniería de Software.
+  \item[1.3. Nombre de la institución:] Oficina de Proyección Social y Extensión Cultural.
+  \item[1.4. Directora de la institución:] Dra. Milder Zanabria Ortega.
+  \item[1.5. Jefa de la unidad receptora:] Dra. Milder Zanabria Ortega.
+  \item[1.6. Duración:] Tres meses.
+  \item[Inicio:] 15/04/2025.
+  \item[Finalización:] 15/07/2025.
+  \item[1.7. Docente de prácticas:] Dr. Pedro Feder Ponce Cordero.
+  \item[1.8. Programa de estudios:] Ingeniería de Sistemas.
+  \item[1.9. Facultad:] Ingeniería Eléctrica, Electrónica y Sistemas (FIMEES).
+\end{description}
+
+\section{Del centro de prácticas}
+
+\subsection{Denominación del centro de prácticas}
+Oficina de Proyección Social y Extensión Cultural (DPSEC).
+
+\subsection{Dirección del centro de prácticas}
+Auditorio Mango UNA Puno, tercer piso.
+
+\subsection{Teléfono, correo electrónico y página web}
+\begin{itemize}
+  \item +51 971 710 338: Ing. Melissa, encargada del proyecto.
+  \item +51 951 522 828: Dra. Milder Zanabria Ortega, directora de la oficina DPSEC.
+  \item +51 950 036 674: Oficina DPSEC, secretaría.
+  \item Página web: \url{https://proyeccionsocial.com}
+\end{itemize}
+
+\subsection{Visión}
+La Dirección de Proyección Social y Extensión Cultural fortalece el desarrollo de la región bajo los principios de la ciencia, la tecnología, los valores culturales y la investigación, en el marco de una responsabilidad social sostenible.
+
+\subsection{Misión}
+La Dirección de Proyección Social y Extensión Cultural genera interacción con la comunidad para el desarrollo regional a través de la ciencia, la tecnología y las expresiones culturales como parte de la labor académica y de investigación, en el marco de una proyección social y extensión cultural sostenible.
+
+\subsection{Valores institucionales}
+El centro de prácticas promueve la responsabilidad social, la colaboración, la ética profesional, la innovación, el compromiso con la comunidad y el respeto por la diversidad cultural.
+
+\subsection{Objetivos de la institución}
+Contribuir al desarrollo regional mediante la articulación de la universidad con la comunidad, impulsando proyectos sociales, culturales, tecnológicos y ambientales.
+
+\subsection{Actividad principal de la institución}
+Promover la interacción entre la universidad y la comunidad a través de proyectos sociales, culturales y de extensión, contribuyendo al desarrollo regional.
+
+\subsection{Organigrama}
+La estructura funcional del centro de prácticas se puede representar de la siguiente manera:
+
+\begin{center}
+\begin{tikzpicture}[node distance=7mm and 8mm, every node/.style={draw, rounded corners, align=center, font=\small, minimum height=8mm}]
+  \node[fill=green!20] (vracad) {VRACAD -- UNA};
+  \node[fill=green!45,below=of vracad,minimum width=7cm] (dpsec) {Dirección de Proyección Social\\Extensión Cultural};
+  \node[below left=of dpsec,xshift=-15mm] (admin) {Secretaría\\administrativa};
+  \node[below right=of dpsec,xshift=15mm] (com) {Área de\\comunicación};
+  \node[fill=green!20,below=18mm of dpsec,xshift=-5cm] (social) {Subunidad de\\proyección social\\y extensión cultural};
+  \node[fill=green!20,below=18mm of dpsec] (graduados) {Subunidad de seguimiento\\de graduados};
+  \node[fill=green!20,below=18mm of dpsec,xshift=5cm] (ambiental) {Subunidad de\\gestión ambiental};
+  \draw (vracad)--(dpsec);
+  \draw (dpsec)--(admin) (dpsec)--(com);
+  \draw (dpsec)--(social) (dpsec)--(graduados) (dpsec)--(ambiental);
+\end{tikzpicture}
+\end{center}
+
+\subsection{Funciones de la oficina, área o dependencia de prácticas}
+La DPSEC coordina y acompaña proyectos de proyección social, extensión cultural, seguimiento de graduados y gestión ambiental, articulando las actividades universitarias con las necesidades de la comunidad.
+
+\newpage
+\section{Objetivos generales y específicos de las prácticas}
+
+\subsection{Objetivo general}
+Mejorar el sistema web Genseg para la gestión de proyectos y actividades de la Oficina de Proyección Social y Extensión Cultural (DPSEC), aplicando conocimientos de ingeniería de software.
+
+\subsection{Objetivos específicos}
+\begin{itemize}
+  \item Analizar los requerimientos funcionales y no funcionales del sistema Genseg versión 1 en colaboración con el personal de la DPSEC.
+  \item Mejorar la arquitectura del sistema, incluyendo la base de datos y los componentes de backend y frontend.
+  \item Desarrollar el backend utilizando Node.js, TypeScript y Prisma, implementando la lógica de negocio y la API REST.
+  \item Desarrollar el frontend utilizando Next.js y TypeScript, siguiendo el diseño propuesto en Figma para asegurar una interfaz intuitiva y funcional.
+  \item Realizar pruebas unitarias y de integración para asegurar la calidad y estabilidad del sistema.
+  \item Documentar el proceso de desarrollo y preparar el sistema para su despliegue.
+\end{itemize}
+
+\section{Componentes del plan}
+
+\subsection{Función principal del puesto}
+Practicante de Desarrollo de Software.
+
+\subsection{Actividades y tareas principales}
+\small
+\begin{longtable}{p{0.22\textwidth}p{0.15\textwidth}p{0.14\textwidth}p{0.27\textwidth}p{0.14\textwidth}}
+\caption{Actividades principales del plan}\label{tab:actividades}\\
+\toprule
+\textbf{Actividad} & \textbf{Unidad de medida} & \textbf{Meta} & \textbf{Herramienta} & \textbf{Responsable}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Actividad} & \textbf{Unidad de medida} & \textbf{Meta} & \textbf{Herramienta} & \textbf{Responsable}\\
+\midrule
+\endhead
+Análisis de requerimientos y diseño del sistema & Documento & En curso & Figma y documentación & David Brahyan Larota Pilco\\
+Desarrollo del backend (API REST y lógica) & Módulos & Pendiente & Node.js, TypeScript, Prisma, PostgreSQL y Docker & David Brahyan Larota Pilco\\
+Desarrollo del frontend (interfaz de usuario) & Vistas y componentes & Pendiente & Next.js, TypeScript, Tailwind CSS y Figma & David Brahyan Larota Pilco\\
+Pruebas unitarias y de integración & Casos de prueba & Pendiente & Herramientas de testing y Postman & David Brahyan Larota Pilco\\
+Documentación del sistema & Manual e informe & Pendiente & Word & David Brahyan Larota Pilco\\
+\bottomrule
+\end{longtable}
+\normalsize
+
+\subsection{Cronograma}
+\small
+\begin{tabularx}{\textwidth}{p{0.27\textwidth}*{13}{>{\centering\arraybackslash}X}}
+\toprule
+\textbf{Tarea} & 1&2&3&4&6&7&8&9&10&11&12&13\\
+\midrule
+Análisis de requerimientos & \checkmarkx&\checkmarkx&\checkmarkx&\checkmarkx&&&&&&&&&\\
+Diseño & &\checkmarkx&\checkmarkx&\checkmarkx&\checkmarkx&&&&&&&&\\
+Desarrollo backend & &&\checkmarkx&\checkmarkx&\checkmarkx&\checkmarkx&&&&&&&\\
+Desarrollo frontend & &&&&\checkmarkx&\checkmarkx&\checkmarkx&\checkmarkx&&&&&\\
+Integración backend--frontend & &&&&&&&\checkmarkx&\checkmarkx&\checkmarkx&\checkmarkx&\checkmarkx&\\
+Pruebas y ajustes & &&&&&&&&\checkmarkx&\checkmarkx&\checkmarkx&\checkmarkx&\\
+Documentación y preparación de entrega & &&&&&&&&&\checkmarkx&\checkmarkx&\checkmarkx&\checkmarkx\\
+\bottomrule
+\end{tabularx}
+\normalsize
+
+\subsection{Competencias}
+\begin{tabularx}{\textwidth}{>{\bfseries}Y Y}
+\toprule
+Competencia general & Indicador de logro\\
+\midrule
+Análisis y solución de problemas & Identifica necesidades, analiza requerimientos y propone soluciones de software.\\
+Trabajo en equipo y comunicación & Participa en reuniones, documenta acuerdos y coordina con el personal de la DPSEC.\\
+Desarrollo tecnológico & Implementa componentes backend y frontend aplicando buenas prácticas de ingeniería de software.\\
+Responsabilidad profesional & Cumple el cronograma, documenta los avances y respeta las normas de la institución.\\
+\bottomrule
+\end{tabularx}
+
+\section{Supervisión}
+La supervisión está a cargo de la Dra. Milder Zanabria Ortega y del docente del curso de prácticas, Dr. Pedro Feder Ponce Cordero.
+
+\section{Horario de prácticas}
+\begin{center}
+\begin{tabular}{>{\bfseries}p{3cm}*{5}{>{\centering\arraybackslash}p{2cm}}}
+\toprule
+Horario & Lunes & Martes & Miércoles & Jueves & Viernes\\
+\midrule
+8:00--12:00 & DPSEC & DPSEC & DPSEC & DPSEC & DPSEC\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Calificación y requisitos de aprobación}
+
+\subsection{Criterios de calificación}
+\begin{enumerate}
+  \item \textbf{Asistencia:} se evaluará la puntualidad y el cumplimiento de las horas de prácticas. Se requiere un mínimo de 80\% de asistencia.
+  \item \textbf{Cumplimiento de actividades:} el practicante debe cumplir las actividades y tareas asignadas, demostrando habilidades técnicas y actitud proactiva.
+  \item \textbf{Desempeño profesional:} se evaluará la actitud, responsabilidad y comportamiento ético durante el desarrollo de las tareas.
+  \item \textbf{Informe final:} se presentará un informe que documente las actividades realizadas, el aprendizaje y la experiencia adquirida.
+  \item \textbf{Evaluación del supervisor:} el supervisor asignará una calificación basada en la ejecución de las tareas, las competencias demostradas y el impacto de la contribución del practicante.
+\end{enumerate}
+
+\subsection{Requisitos para la aprobación}
+\begin{enumerate}
+  \item Cumplir una asistencia mínima del 80\% a las prácticas preprofesionales.
+  \item Cumplir las metas establecidas en el plan de trabajo, incluida la presentación y aprobación del informe final.
+  \item Obtener una evaluación positiva por parte del supervisor de la institución.
+  \item Presentar y aprobar el informe de prácticas dentro del plazo establecido por la institución educativa.
+\end{enumerate}
+
+\section{Reglamento e instrumentos generales}
+
+\subsection*{Artículo 5: objetivos de las prácticas preprofesionales}
+\begin{enumerate}[label=\Alph*.]
+  \item Aplicar los conocimientos teóricos y prácticos adquiridos durante la carrera a la realidad profesional.
+  \item Cumplir uno de los requisitos establecidos en la currícula para obtener la condición de egresado.
+  \item Afianzar conocimientos y experiencias, colaborando con la formación integral del practicante.
+  \item Adquirir habilidades y destrezas en la planificación, desarrollo y evaluación de programas propios de la escuela profesional.
+  \item Aprender a trabajar en distintos niveles como miembro de un equipo interdisciplinario y multifacético.
+  \item Realizar actividades de extensión universitaria en beneficio de la comunidad y de la región.
+\end{enumerate}
+
+\subsection*{Artículo 19: causas de sanción}
+\begin{enumerate}
+  \item Demora injustificada en integrarse al centro de prácticas.
+  \item No ejecutar las prácticas por motivos injustificados.
+  \item Abandonar las prácticas.
+  \item Presentar el informe de prácticas fuera del plazo establecido.
+  \item Desconocer o no respetar las normas organizacionales o laborales del centro de prácticas.
+\end{enumerate}
+
+\subsection*{Artículo 20}
+Las sanciones por las faltas ocasionan, en primer lugar, una amonestación; luego, la separación de las prácticas y, finalmente, la anulación de estas, previa investigación de las causas.
+
+\subsection*{Artículo 21}
+Los estudiantes sancionados con la anulación de la práctica preprofesional tendrán una última oportunidad de repetirla después de una convocatoria.
+
+\section{Referencias}
+\begin{itemize}
+  \item Dirección de Proyección Social y Extensión Cultural. Información institucional y documentación del centro de prácticas.
+  \item Universidad Nacional del Altiplano. Reglamento e instrumentos generales de prácticas preprofesionales.
+\end{itemize}
+
+\end{document}

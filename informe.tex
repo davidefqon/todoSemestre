@@ -4,7 +4,7 @@
 \IfFileExists{config/datos.local.tex}{\input{config/datos.local.tex}}{\input{config/datos.example.tex}}
 
 % incluyendo paquetes
-\usepackage{milibreria}
+\usepackage{estilos/informe}
 \pgfplotsset{compat=1.18}
 \usepackage{etoolbox}
 \usepackage{float}
@@ -39,7 +39,7 @@
 
 
 
-\graphicspath{{./}} % Assets are resolved relative to the repository root.
+\graphicspath{{./}} % Explicit asset paths remain relative to the repository root.
 \begin{document} % inicio  de documento 
 
 
@@ -54,7 +54,7 @@
 \selectlanguage{english}
 \pagestyle{fancy} \mystyle \newpage % Aplicar el estilo de encabezado y pie de página
 
-\input{parte1to4.tex}
+\input{secciones/01-contexto-institucional.tex}
 
 \section{Cumplimiento progresivo del plan de prácticas pre profesionales }
 
@@ -66,7 +66,7 @@ Para garantizar un desarrollo ágil y eficiente, el proyecto adoptará la metodo
 \begin{figure}[!htb] 
     \centering 
     \caption{Fases de la metodología SCRUM} 
-    \includegraphics[width=0.9\textwidth]{images/SCRUM.png} 
+    \includegraphics[width=0.9\textwidth]{assets/imagenes/SCRUM.png}
     \label{fig:scrum} 
 \end{figure}
 \FloatBarrier
@@ -199,13 +199,13 @@ Durante la entrevista realizado en una reunion evidenciado (ver Figura~\ref{fig:
 \begin{figure}[!htb] 
     \centering 
     \caption{Diagrama de casos de uso} 
-    \includegraphics[width=0.8\textwidth]{images/casos_uso.png} 
+    \includegraphics[width=0.8\textwidth]{assets/imagenes/casos_uso.png}
     \label{fig:casos_uso} 
 \end{figure}
 \FloatBarrier
 
 \newpage
-\input{requerimientos.tex}
+\input{secciones/02-requerimientos.tex}
 
 
 \subsection{Actividad 2: Diseño}
@@ -236,7 +236,7 @@ Durante la entrevista realizado en una reunion evidenciado (ver Figura~\ref{fig:
 \end{table}
 \FloatBarrier
 
-\input{disenio.tex}
+\input{secciones/03-diseno.tex}
 
 
 
@@ -275,7 +275,7 @@ Durante la entrevista realizado en una reunion evidenciado (ver Figura~\ref{fig:
 \end{longtable}
 \FloatBarrier
 
-\input{backend.tex}
+\input{secciones/04-backend.tex}
 
 
 \subsection{Actividad 4: Desarrollo del Frontend (Interfaz de Usuario) }
@@ -322,7 +322,7 @@ Usuario) \\ \hline
 Crear todo los componentes como esta en el diseño del figma y crear las rutas para la redirección, crear la estructura de la pagina, crear la pagina principal, crear la interfaz de formularios, crear la interfaz de Proyectos, crear la interfaz de Usuarios, crear los pasos para subir proyectos.
 
 
-\input{actividad4.tex}
+\input{secciones/05-frontend.tex}
 
 
 \subsection{Actividad 5: Pruebas
@@ -367,7 +367,7 @@ Se ha realizado pruebas de tokens pruebas de hackeo de cuenta por fuerza bruta s
 
 
 
-\input{actividad5.tex}
+\input{secciones/06-pruebas.tex}
 
 \section{Conclusiones}
 La implementación de la metodología Extreme Programming (XP) permitió un desarrollo ágil y colaborativo, cumpliendo el 100\% del plan con hitos clave como análisis de requerimientos (10 funcionales y 3 no funcionales), diseño de interfaces (90\% de madurez en Figma), desarrollo de backend (API RESTful con Node.js/Express, JWT, PostgreSQL y Prisma) y frontend (Next.js/Tailwind CSS al 90\%), y pruebas parciales de seguridad (40\%). SCRUM optimizó la calidad del software y la comunicación con el equipo. Se adquirieron habilidades técnicas (Figma, Prisma, Next.js), gestión de proyectos (GitHub, priorización) y competencias blandas (comunicación con usuarios). Los resultados demuestran un sistema funcional, aunque se recomienda completar pruebas y reforzar la retroalimentación continua.
@@ -377,35 +377,35 @@ Para mejorar el proyecto, se sugiere: 1) Reforzar SCRUM con retroalimentación s
 \newpage
 \section{Anexos}
 \section{Carta de presenctación}
-\includepdf[pages=-]{carta.pdf} 
+\includepdf[pages=-]{anexos/carta.pdf}
 
 \section{Carta de aceptacion}
-\includepdf[pages=-]{aceptacion.pdf}
+\includepdf[pages=-]{anexos/aceptacion.pdf}
 
 \section{Evidencias de las practicas reuniones}
 \begin{figure}[!htb] 
     \centering 
     \caption{Evidencia de las reuniones} 
-    \includegraphics[width=0.8\textwidth]{images/practicas.jpg} 
+    \includegraphics[width=0.8\textwidth]{assets/imagenes/practicas.jpg}
     \label{fig:reunion} 
 \end{figure} 
 \FloatBarrier
 \begin{figure}[!htb] 
     \centering 
     \caption{Evidencia de las reuniones 1} 
-    \includegraphics[width=0.8\textwidth]{images/practicas1.jpg} 
+    \includegraphics[width=0.8\textwidth]{assets/imagenes/practicas1.jpg}
 \end{figure} 
 \FloatBarrier
 
 \begin{figure}[!htb] 
     \centering 
     \caption{Evidencia de las reuniones 2} 
-    \includegraphics[width=0.8\textwidth]{images/practicas2.jpg} 
+    \includegraphics[width=0.8\textwidth]{assets/imagenes/practicas2.jpg}
 \end{figure} 
 \FloatBarrier
 
 \section{Plan de practicas}
-\includepdf[pages=-]{plan.pdf}  % Incluye todas las páginas de plan.pdf
+\includepdf[pages=-]{anexos/plan.pdf}  % Incluye todas las páginas de plan.pdf
 
 %\FloatBarrier
 %
@@ -421,7 +421,7 @@ Para mejorar el proyecto, se sugiere: 1) Reforzar SCRUM con retroalimentación s
 %\renewcommand{\refname}{\thesection \hspace{0.5em}  Referencias}
 %
 %\bibliographystyle{apacite}
-%\bibliography{referencias.bib}
+%\bibliography{referencias/referencias.bib}
 
 
 \end{document}

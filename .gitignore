@@ -22,11 +22,11 @@
 _minted-*/
 build/
 
-# Local LaTeX data and CodeGraph metadata
+# Local LaTeX data and generated metadata
 config/datos.local.tex
 .codegraph/
 
-# Python cache files (for scripts such as caratulas/QR.py)
+# Python cache files for scripts such as caratulas/QR.py
 __pycache__/
 *.py[cod]
 *$py.class

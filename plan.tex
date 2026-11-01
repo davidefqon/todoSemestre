@@ -18,6 +18,9 @@
 \usepackage{fancyhdr}
 \usepackage{float}
 
+% Prefer ignored local data; fall back to the tracked non-sensitive example.
+\IfFileExists{config/datos.local.tex}{\input{config/datos.local.tex}}{\input{config/datos.example.tex}}
+
 \geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
 \hypersetup{colorlinks=true,linkcolor=black,urlcolor=blue}
 \setlength{\parindent}{1.25cm}
@@ -53,11 +56,11 @@
 
 {\Large\textbf{PLAN DE PRÁCTICAS PRE PROFESIONALES II}}\\[1.5cm]
 {\large\textbf{CENTRO DE PRÁCTICAS:}}\\[0.2cm]
-{\large Oficina de Dirección de Proyección Social y Extensión Cultural}\\[0.9cm]
+{\large \InstitucionNombre}\\[0.9cm]
 {\large\textbf{PRESENTADO POR:}}\\[0.2cm]
-{\large David Brahyan Larota Pilco}\\[0.9cm]
+{\large \PracticanteNombre}\\[0.9cm]
 {\large\textbf{DOCENTE:}}\\[0.2cm]
-{\large Dr. Pedro Feder Ponce Cordero}\\[0.9cm]
+{\large \DocenteNombre}\\[0.9cm]
 {\large\textbf{SEMESTRE:} X \hspace{1.5cm} \textbf{GRUPO:} B}\\[1.2cm]
 
 {\large PUNO -- PERÚ}\\[1.5cm]
@@ -67,14 +70,14 @@
 
 \begin{tabular}{>{\centering\arraybackslash}p{0.4\textwidth}>{\centering\arraybackslash}p{0.4\textwidth}}
 \rule{5cm}{0.4pt} & \rule{5cm}{0.4pt}\\
-David Brahyan Larota Pilco & Dra. Milder Zanabria Ortega\\
+\PracticanteNombre & \InstitucionJefa\\
 Practicante preprofesional & Jefa de la unidad receptora
 \end{tabular}
 
 \vfill
 \textbf{Docente de prácticas preprofesionales}\\[0.7cm]
 \rule{6cm}{0.4pt}\\
-Dr. Pedro Feder Ponce Cordero
+\DocenteNombre
 \end{titlepage}
 
 \tableofcontents
@@ -84,15 +87,15 @@ Dr. Pedro Feder Ponce Cordero
 \section{Parte informativa}
 
 \begin{description}[style=multiline,leftmargin=4.5cm,labelwidth=4cm]
-  \item[1.1. Nombre del practicante:] David Brahyan Larota Pilco.
-  \item[1.2. Especialidad de prácticas:] Ingeniería de Software.
-  \item[1.3. Nombre de la institución:] Oficina de Proyección Social y Extensión Cultural.
-  \item[1.4. Directora de la institución:] Dra. Milder Zanabria Ortega.
-  \item[1.5. Jefa de la unidad receptora:] Dra. Milder Zanabria Ortega.
+  \item[1.1. Nombre del practicante:] \PracticanteNombre.
+  \item[1.2. Especialidad de prácticas:] \PracticanteEspecialidad.
+  \item[1.3. Nombre de la institución:] \InstitucionNombre.
+  \item[1.4. Directora de la institución:] \InstitucionJefa.
+  \item[1.5. Jefa de la unidad receptora:] \InstitucionJefa.
   \item[1.6. Duración:] Tres meses.
-  \item[Inicio:] 15/04/2025.
-  \item[Finalización:] 15/07/2025.
-  \item[1.7. Docente de prácticas:] Dr. Pedro Feder Ponce Cordero.
+  \item[Inicio:] \FechaInicio.
+  \item[Finalización:] \FechaFin.
+  \item[1.7. Docente de prácticas:] \DocenteNombre.
   \item[1.8. Programa de estudios:] Ingeniería de Sistemas.
   \item[1.9. Facultad:] Ingeniería Eléctrica, Electrónica y Sistemas (FIMEES).
 \end{description}
@@ -107,10 +110,10 @@ Auditorio Mango UNA Puno, tercer piso.
 
 \subsection{Teléfono, correo electrónico y página web}
 \begin{itemize}
-  \item +51 971 710 338: Ing. Melissa, encargada del proyecto.
-  \item +51 951 522 828: Dra. Milder Zanabria Ortega, directora de la oficina DPSEC.
-  \item +51 950 036 674: Oficina DPSEC, secretaría.
-  \item Página web: \url{https://proyeccionsocial.com}
+  \item \TelefonoMelissa: Ing. Melissa, encargada del proyecto.
+  \item \TelefonoJefa: \InstitucionJefa, directora de la oficina DPSEC.
+  \item \TelefonoOficina: Oficina DPSEC, secretaría.
+  \item Página web: \url{\SitioWeb}
 \end{itemize}
 
 \subsection{Visión}
@@ -182,11 +185,11 @@ Practicante de Desarrollo de Software.
 \textbf{Actividad} & \textbf{Unidad de medida} & \textbf{Meta} & \textbf{Herramienta} & \textbf{Responsable}\\
 \midrule
 \endhead
-Análisis de requerimientos y diseño del sistema & Documento & En curso & Figma y documentación & David Brahyan Larota Pilco\\
-Desarrollo del backend (API REST y lógica) & Módulos & Pendiente & Node.js, TypeScript, Prisma, PostgreSQL y Docker & David Brahyan Larota Pilco\\
-Desarrollo del frontend (interfaz de usuario) & Vistas y componentes & Pendiente & Next.js, TypeScript, Tailwind CSS y Figma & David Brahyan Larota Pilco\\
-Pruebas unitarias y de integración & Casos de prueba & Pendiente & Herramientas de testing y Postman & David Brahyan Larota Pilco\\
-Documentación del sistema & Manual e informe & Pendiente & Word & David Brahyan Larota Pilco\\
+Análisis de requerimientos y diseño del sistema & Documento & En curso & Figma y documentación & \PracticanteNombre\\
+Desarrollo del backend (API REST y lógica) & Módulos & Pendiente & Node.js, TypeScript, Prisma, PostgreSQL y Docker & \PracticanteNombre\\
+Desarrollo del frontend (interfaz de usuario) & Vistas y componentes & Pendiente & Next.js, TypeScript, Tailwind CSS y Figma & \PracticanteNombre\\
+Pruebas unitarias y de integración & Casos de prueba & Pendiente & Herramientas de testing y Postman & \PracticanteNombre\\
+Documentación del sistema & Manual e informe & Pendiente & Word & \PracticanteNombre\\
 \bottomrule
 \end{longtable}
 \normalsize
@@ -221,7 +224,7 @@ Responsabilidad profesional & Cumple el cronograma, documenta los avances y resp
 \end{tabularx}
 
 \section{Supervisión}
-La supervisión está a cargo de la Dra. Milder Zanabria Ortega y del docente del curso de prácticas, Dr. Pedro Feder Ponce Cordero.
+La supervisión está a cargo de \InstitucionJefa y del docente del curso de prácticas, \DocenteNombre.
 
 \section{Horario de prácticas}
 \begin{center}

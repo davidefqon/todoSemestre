@@ -1,5 +1,8 @@
 \documentclass[12pt,a4paper]{article}
 
+% Prefer ignored local data; fall back to the tracked non-sensitive example.
+\IfFileExists{config/datos.local.tex}{\input{config/datos.local.tex}}{\input{config/datos.example.tex}}
+
 % incluyendo paquetes
 \usepackage{milibreria}
 \pgfplotsset{compat=1.18}
@@ -36,7 +39,7 @@
 
 
 
-\graphicspath{{C:/Users/david/imagesppt}} %\incluye todos las imágenes de esa ruta
+\graphicspath{{./}} % Assets are resolved relative to the repository root.
 \begin{document} % inicio  de documento 
 
 
@@ -74,7 +77,7 @@ Para garantizar un desarrollo ágil y eficiente, el proyecto adoptará la metodo
     \renewcommand{\arraystretch}{1.5} % Espaciado entre filas
     \begin{tabular}{|p{5cm}|p{10cm}|}
         \hline
-        \textbf{Responsable de la actividad} & David Brahyan Larota Pilco \\ \hline
+        \textbf{Responsable de la actividad} & \PracticanteNombre \\ \hline
         \textbf{Objetivo de la actividad} & Mejorar y documentar los requerimientos funcionales de la primera version y no funcionales del sistema de gestión de proyectos, para las tres subunidades de la Dirección de Proyección Social y Extensión Cultural. \\ \hline
         \textbf{Tareas realizadas} &
         \begin{itemize}
@@ -107,7 +110,7 @@ Para garantizar un desarrollo ágil y eficiente, el proyecto adoptará la metodo
         \hline
 
         \textbf{Responsable de la actividad}
-        & David Brahyan Larota Pilco \\ \hline
+        & \PracticanteNombre \\ \hline
 
         \textbf{Objetivo de la actividad}
         & Mejorar y documentar los requerimientos funcionales de la primera versión y los requerimientos no funcionales del sistema de gestión de proyectos para las tres subunidades de la Dirección de Proyección Social y Extensión Cultural. \\ \hline
@@ -211,7 +214,7 @@ Durante la entrevista realizado en una reunion evidenciado (ver Figura~\ref{fig:
     \caption{Resumen de la Actividad 2}
     \begin{tabular}{|p{5cm}|p{10cm}|}
         \hline
-        \textbf{Responsable de la actividad} & David Brahyan Larota Pilco \\ \hline
+        \textbf{Responsable de la actividad} & \PracticanteNombre \\ \hline
         \textbf{Objetivo de la actividad} & Diseñar el sistema en relacion con los requerimientos recogidos\\ \hline
         \textbf{Tareas realizadas} &
         \begin{itemize}
@@ -240,7 +243,7 @@ Durante la entrevista realizado en una reunion evidenciado (ver Figura~\ref{fig:
 \subsection{Actividad 3: Desarrollo del Backend}
 \begin{longtable}{|p{5cm}|p{10cm}|}
     \caption{Resumen de la Actividad 3} \\ \hline
-    \textbf{Responsable de la actividad} & David Brahyan Larota Pilco \\ \hline
+    \textbf{Responsable de la actividad} & \PracticanteNombre \\ \hline
     \textbf{Objetivo de la actividad} & Desarrollo Backend\\ \hline
     \textbf{Tareas realizadas} & 
     \begin{itemize}
@@ -281,7 +284,7 @@ Durante la entrevista realizado en una reunion evidenciado (ver Figura~\ref{fig:
     \caption{Resumen de la Actividad 4}
     \begin{tabular}{|p{5cm}|p{10cm}|}
         \hline
-        \textbf{Responsable de la actividad} & David Brahyan Larota Pilco \\ \hline
+        \textbf{Responsable de la actividad} & \PracticanteNombre \\ \hline
         \textbf{Objetivo de la actividad} & Desarrollo del
 Frontend
 (Interfaz de
@@ -330,7 +333,7 @@ Integración }
     \caption{Resumen de la Actividad 5}
     \begin{tabular}{|p{5cm}|p{10cm}|}
         \hline
-        \textbf{Responsable de la actividad} & David Brahyan Larota Pilco \\ \hline
+        \textbf{Responsable de la actividad} & \PracticanteNombre \\ \hline
         \textbf{Objetivo de la actividad} & Pruebas
 Unitarias y de
 Integración \\ \hline

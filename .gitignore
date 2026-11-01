@@ -1,0 +1,47 @@
+# LaTeX auxiliary and build files
+*.aux
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.out
+*.run.xml
+*.synctex
+*.synctex.gz
+*.toc
+*.xdv
+*.bbl
+*.nav
+*.snm
+*.vrb
+
+# LaTeX generated directories
+_minted-*/
+
+# Python cache files (for scripts such as caratulas/QR.py)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+~$*

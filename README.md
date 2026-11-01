@@ -7,6 +7,21 @@ This repository contains the LaTeX sources and supporting assets for the practic
 - `anexos/plan.tex` — practice plan.
 - `informe.tex` — final report; it includes the report sections and `anexos/plan.pdf` as a deliverable.
 
+## Modular style layout
+
+`informe.tex` loads the public coordinator `estilos/informe.sty`. The coordinator
+loads focused modules in dependency order:
+
+- `estilos/paquetes.sty` — package dependencies and options.
+- `estilos/colores.sty` — shared color definitions.
+- `estilos/encabezados.sty` — page headers, title formatting, logo paths, and `textpos` dimensions.
+- `estilos/comandos.sty` — custom commands, environments, framed boxes, figures, and key-value helpers.
+- `estilos/codigo.sty` — listings configuration.
+
+Shared logo paths remain rooted at `assets/logos/`. `Sistemaslogo` and
+`Logo_UNAP` are documented as potentially missing local assets; no cover or
+report content is changed by the modular layout.
+
 ## Visual Studio Code workflow
 
 Install the **LaTeX Workshop** extension, open this repository as the workspace, and open either entry point (`informe.tex` or `anexos/plan.tex`). Use the extension's **Build LaTeX project** command to compile from Visual Studio Code. Configure the extension's output directory as `build/` if generated files should stay outside the repository root.

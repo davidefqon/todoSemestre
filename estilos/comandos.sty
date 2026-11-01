@@ -1,0 +1,79 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{comandos}[Informe custom commands]
+\newcommand{\espacio}{\par\vspace{3mm}}
+\newcommand{\miRectangulo}[6]{
+    \begin{tikzpicture}[overlay, remember picture]
+        \coordinate (miPunto) at (current page.center);
+        \fill[#5, rotate around={#6:(miPunto)}] ([shift={(miPunto)}] #1,#2) rectangle ++(#3,#4);
+    \end{tikzpicture}
+}
+\newcommand{\miRomboImagen}[4]{
+    \begin{tikzpicture}[overlay, remember picture]
+        \coordinate (ref) at (#1,#2);
+        \clip ($(ref) + (0,9.5)$) -- ($(ref) + (9.5,0)$) -- ($(ref) + (0,-9.5)$) -- ($(ref) + (-9.5,0)$) -- cycle;
+        \node at (ref) {\includegraphics[width=#4cm]{#3}};
+    \end{tikzpicture}
+}
+\newcommand{\SuperHuge}[1]{{\fontsize{50}{60}\selectfont\textbf{#1}}}
+\newmdenv[
+    topline=false,
+    bottomline=false,
+    rightline=false,
+    linewidth=1.5pt,
+    linecolor=azul,
+    innerleftmargin=-10pt,
+    innerrightmargin= 0pt,
+    innertopmargin=10pt,
+    innerbottommargin=10pt
+        ]{siderule}
+\NewDocumentCommand{\miComando}{O{Valor por defecto} O{valor default} m}{
+    Primer argumento: #1 \\ %prueba
+    Segundo argumento: #2 \\
+    Argumento opcional: #3
+}
+\NewDocumentCommand{\DleftRule}{O{.} m}{
+    \begin{siderule}
+    \begin{quote}
+        #2#1
+    \end{quote}
+    \end{siderule}
+}
+\NewDocumentCommand{\Dbox}{O{.} m m}{
+  \begin{tcolorbox}[enhanced,attach boxed title to top left={yshift=-3mm,xshift=3mm,yshifttext=-1mm},colback=white!5!white,colframe=azul!75!black,colbacktitle=white!80!white,title=#2,fonttitle=\bfseries, coltitle=rojo,boxed title style={size=small,colframe=white!50!white} ]
+    \begin{center}
+      #3#1
+    \end{center}
+  \end{tcolorbox}
+}
+\makeatletter
+\define@key{persona}{nombre}{\def\personaNombre{#1}}
+\define@key{persona}{edad}{\def\personaEdad{#1}}
+\define@key{persona}{ciudad}{\def\personaCiudad{#1}}
+\makeatother
+\newcommand{\persona}[1]{%
+    \def\personaCiudad{Peru}
+    \setkeys{persona}{#1}%
+    Nombre: \personaNombre \\
+    Edad: \personaEdad \\
+    Ciudad: \personaCiudad
+}
+\newenvironment{destacado}
+{\begin{quote}\bfseries}
+{\end{quote}}
+\newcommand{\myimage}[3]{
+    \begin{figure}[hbt!]
+        \centering
+        \includegraphics[width=]{#1}
+        \caption{#3}
+        \label{fig:#3}
+    \end{figure}
+}
+\NewDocumentCommand{\img}{O{0.5} m m m}{
+    \begin{figure}[ht]
+        \centering
+        \includegraphics[width=#1\textwidth]{#2}
+        \caption{#3}
+        \label{fig:#4}
+    \end{figure}
+}
+\endinput

@@ -1,0 +1,19 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{codigo}[Informe listings configuration]
+\lstset{
+    language=C++,
+    basicstyle=\ttfamily\normalsize,
+    keywordstyle=\bfseries,
+    commentstyle=\color{negro},
+    stringstyle=\ttfamily,
+    numbers=left,
+    numberstyle=\normalsize\color{black},
+    stepnumber=1,
+    showstringspaces=false,
+    breaklines=true,
+    frame=leftline,
+    backgroundcolor=\color{white},
+    prebreak=\mbox{\textcolor{negro}{\scalebox{0.7}{$\lnot$}}},
+    postbreak=\mbox{\textcolor{negro}{\scalebox{0.7}{$\hookrightarrow$}}\space}
+}
+\endinput

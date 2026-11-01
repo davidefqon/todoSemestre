@@ -1,0 +1,21 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{encabezados}[Informe headers and title formatting]
+\setlength{\TPHorizModule}{1mm}
+\setlength{\TPVertModule}{1mm}
+\titleformat{\section}{\normalfont\Large\bfseries}{\thesection \hspace{0.5em} |  }{0.5em}{}
+\titleformat{\subsection}{\normalfont\large\bfseries}{\thesubsection \hspace{0.5em} |  }{0.5em}{}
+\titleformat{\subsubsection}{\normalfont\small\bfseries}{\thesubsubsection \hspace{0.5em} |  }{0.5em}{}
+\newcommand{\logoleft}{assets/logos/Sistemaslogo}
+\newcommand{\logoright}{assets/logos/Logo_UNAP}
+% Shared header logos are expected under assets/logos/; see README.md for missing files.
+\newcommand{\mystyle}{
+    \fancyhf{}
+    \renewcommand{\headrulewidth}{3pt}
+    \renewcommand{\headrule}{\hbox to\headwidth{\color{azulm}\leaders\hrule height \headrulewidth\hfill}}
+    \lhead{\includegraphics[width=10mm]{\logoleft}}
+    \rhead{\includegraphics[width=10mm]{\logoright}}
+    \fancyhead[C]{Universidad Nacional del Altiplano}
+    \fancyfoot[C]{\thepage}
+    \fancyfoot[R]{}
+}
+\endinput

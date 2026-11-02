@@ -16,6 +16,10 @@
 
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
 
+% APA-compatible body paragraph defaults while preserving the institutional design.
+\setlength{\parindent}{0.5in}
+\setlength{\parskip}{0pt}
+
 % Redefinir el nombre de la bibliografía
 
 \input{config/acronimos.tex}
@@ -35,320 +39,24 @@
     \listoftables % lista de tablas
 \selectlanguage{english}
 \pagestyle{fancy} \mystyle \newpage % Aplicar el estilo de encabezado y pie de página
+\doublespacing
 
-\input{secciones/01-contexto-institucional.tex}
+% Document-specific institutional numbering: Roman main sections and readable subsections.
+\renewcommand{\thesection}{\Roman{section}}
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
 
-\section{Cumplimiento progresivo del plan de prácticas pre profesionales }
-
-El puesto de Desarrollador de Software Frontend Junior en la Dirección de Proyección Social y Extensión Cultural desempeña un rol clave en el diseño, desarrollo y mantenimiento de soluciones tecnológicas que optimicen la operación de la institución. Este puesto no solo requiere habilidades técnicas en desarrollo frontend, sino también una comprensión profunda de los procesos institucionales para garantizar que las soluciones propuestas sean eficientes, de alta calidad, y alineadas con las necesidades específicas de la universidad.
-
-El trabajo se desarrolló mediante un flujo iterativo e incremental: para cada funcionalidad se diseñó una propuesta, se presentó al supervisor o encargado de la oficina, se implementó y se ajustó a partir de la retroalimentación recibida. Este flujo es compatible con prácticas asociadas a Scrum y XP, sin afirmar la adopción completa de un marco formal.
-
-\subsection*{Diagrama del Ciclo de Vida}
-\begin{figure}[!htb] 
-    \centering 
-    \caption{Flujo iterativo de desarrollo}
-    \includegraphics[width=0.9\textwidth]{assets/imagenes/SCRUM.png}
-    \label{fig:scrum} 
-\end{figure}
-\FloatBarrier
-
-\subsection{Actividad 1: Análisis de requerimientos del sistema}
-\begin{table}[!htb]
-    \centering
-    \renewcommand{\arraystretch}{1.5} % Espaciado entre filas
-    \begin{tabular}{|p{5cm}|p{10cm}|}
-        \hline
-        \textbf{Responsable de la actividad} & \PracticanteNombre \\ \hline
-        \textbf{Objetivo de la actividad} & Mejorar y documentar los requerimientos funcionales de la primera versión y no funcionales del sistema de gestión de proyectos, para las tres subunidades de la Dirección de Proyección Social y Extensión Cultural. \\ \hline
-        \textbf{Tareas realizadas} &
-        \begin{itemize}
-            \item Reuniones con el equipo de Proyección Social.
-            \item Análisis de los procesos actuales de gestión.
-            \item Documentación de los requerimientos en el sistema.
-        \end{itemize} \\ \hline
-        \textbf{Duración de la actividad} & 4 semanas \\ \hline
-        \textbf{Fecha de inicio} & 15/04/25 \\ \hline
-        \textbf{Fecha de culminación} & 15/05/25 \\ \hline
-        \textbf{Materiales utilizados} &
-        \begin{itemize}
-            \item Laptop Huawei Matebook D16
-            \item Visual Paradigm 16.2
-        \end{itemize} \\ \hline
-        %\textbf{Detalles de la actividad (Fotos)} & [Incluye fotos relevantes aquí si las tienes] \\ \hline
-        \textbf{Resultados alcanzados} & Documento de especificaciones de requerimientos finalizado. \\ \hline
-        \textbf{Porcentaje de avance} & 100\% \\ \hline
-    \end{tabular}
-    \caption{Resumen de la Actividad 1}
-    \label{tab:actividad1}
-\end{table}
-\FloatBarrier
-
-\begin{table}[!htb]
-    \centering
-    \renewcommand{\arraystretch}{1.5}
-
-    \begin{tabularx}{\linewidth}{|p{0.30\linewidth}|Y|}
-        \hline
-
-        \textbf{Responsable de la actividad}
-        & \PracticanteNombre \\ \hline
-
-        \textbf{Objetivo de la actividad}
-        & Mejorar y documentar los requerimientos funcionales de la primera versión y los requerimientos no funcionales del sistema de gestión de proyectos para las tres subunidades de la Dirección de Proyección Social y Extensión Cultural. \\ \hline
-
-        \textbf{Tareas realizadas}
-        &
-        \begin{itemize}[nosep, leftmargin=*]
-            \item Reuniones con el equipo de Proyección Social.
-            \item Análisis de los procesos actuales de gestión.
-            \item Documentación de los requerimientos en el sistema.
-        \end{itemize}
-        \\ \hline
-
-        \textbf{Duración de la actividad}
-        & 4 semanas \\ \hline
-
-        \textbf{Fecha de inicio}
-        & 15/04/25 \\ \hline
-
-        \textbf{Fecha de culminación}
-        & 15/05/25 \\ \hline
-
-        \textbf{Materiales utilizados}
-        &
-        \begin{itemize}[nosep, leftmargin=*]
-            \item Laptop Huawei MateBook D16.
-            \item Visual Paradigm 16.2.
-        \end{itemize}
-        \\ \hline
-
-        \textbf{Resultados alcanzados}
-        & Documento de especificaciones de requerimientos finalizado. \\ \hline
-
-        \textbf{Porcentaje de avance}
-        & 100\% \\ \hline
-
-    \end{tabularx}
-
-    \caption{Resumen de la Actividad 1}
-    \label{tab:actividad1_1}
-\end{table}
-
-\FloatBarrier
-
-\subsubsection{Proceso de Recolección de Requerimientos}
-En la fase de requerimientos, se realizó una entrevista estructurada con los usuarios finales y otras partes interesadas clave, incluyendo al personal de la Dirección de Proyección Social. Este paso fue fundamental para garantizar que el software se desarrolle alineado con las 
-expectativas del cliente. 
-Durante la entrevista y reunión evidenciada (ver Figura~\ref{fig:reunion}), se identificaron los siguientes requerimientos funcionales y no funcionales del sistema de gestión de proyectos:
+\input{secciones/introduccion.tex}
+\input{secciones/01-marco-legal.tex}
+\input{secciones/02-objetivos.tex}
+\input{secciones/03-datos-generales.tex}
+\input{secciones/04-centro-practicas.tex}
+\input{secciones/05-cumplimiento-practicas.tex}
+%\input{secciones/06-resumen-tareas.tex}
+%\input{secciones/07-conclusiones-recomendaciones.tex}
+%\input{secciones/08-bibliografia.tex}
+%\input{secciones/09-anexos.tex}
 
 
-\subsubsection{Requerimientos identificados}
-\begin{table}[!htb]
-    \centering  
-        \caption{Lista de requerimientos funcionales}
-    \begin{tabular}{p{6cm} p{6cm} }
-        \toprule
-        \textbf{Requerimiento funcional}  &   \textbf{Nombre del requerimiento}   \\
-        \midrule
-        RF-01   &   Gestionar roles \\
-        RF-02   &   Gestionar permisos  \\
-        RF-03   &   Gestionar usuarios  \\
-        RF-04   &   Gestionar sub unidad    \\
-        RF-05   &   Gestionar proyectos \\
-        RF-06   &   Listar Proyectos    \\
-        RF-07   &   Registrar voluntario    \\
-        RF-08   &   Notificaciones  \\
-        RF-09   &   Configuración de página \\
-        RF-10   &   Gráficos estadísticos   \\
-        \bottomrule
-    \end{tabular}
-\end{table}
-
-\begin{table}[!htb]
-    \centering  
-        \caption{Lista de requerimientos no funcionales}
-    \begin{tabular}{p{6cm} p{6cm} }
-        \toprule
-        \textbf{Requerimiento no funcional}  &   \textbf{Nombre del requerimiento}   \\
-        \midrule
-        RNF-01   &   Nivel de usuario \\
-        RNF-02   &   Interfaz Intuitiva  \\
-        RNF-03   &   Rapidez de carga  \\
-        \bottomrule
-    \end{tabular}
-\end{table}
-\begin{figure}[!htb] 
-    \centering 
-    \caption{Diagrama de casos de uso} 
-    \includegraphics[width=0.8\textwidth]{assets/imagenes/casos_uso.png}
-    \label{fig:casos_uso} 
-\end{figure}
-\FloatBarrier
-
-\newpage
-\input{secciones/02-requerimientos.tex}
-
-
-\subsection{Actividad 2: Diseño}
-\begin{table}[!htb]
-    \centering
-    \caption{Resumen de la Actividad 2}
-    \begin{tabular}{|p{5cm}|p{10cm}|}
-        \hline
-        \textbf{Responsable de la actividad} & \PracticanteNombre \\ \hline
-        \textbf{Objetivo de la actividad} & Diseñar el sistema en relación con los requerimientos recogidos\\ \hline
-        \textbf{Tareas realizadas} &
-        \begin{itemize}
-            \item Diseño de la interfaz por modulos.
-        \end{itemize} \\ \hline
-        \textbf{Duración de la actividad} & 2 semanas \\ \hline
-        \textbf{Fecha de inicio} & 16/05/25 \\ \hline
-        \textbf{Fecha de culminación} & 31/05/25 \\ \hline
-        \textbf{Materiales utilizados} &
-        \begin{itemize}
-            \item Laptop Huawei Matebook D16
-            \item Figma 16.2
-        \end{itemize} \\ \hline
-        %\textbf{Detalles de la actividad (Fotos)} & [Incluye fotos relevantes aquí si las tienes] \\ \hline
-        \textbf{Resultados alcanzados} & Prototipo en un nivel de madurez muy alto como para que sea programado\\ \hline
-        \textbf{Porcentaje de avance} & 90\% \\ \hline
-    \end{tabular}
-    \label{tab:actividad2}
-\end{table}
-\FloatBarrier
-
-\input{secciones/03-diseno.tex}
-
-
-
-\subsection{Actividad 3: Desarrollo del Backend}
-\begin{longtable}{|p{5cm}|p{10cm}|}
-    \caption{Resumen de la Actividad 3} \\ \hline
-    \textbf{Responsable de la actividad} & \PracticanteNombre \\ \hline
-    \textbf{Objetivo de la actividad} & Desarrollo Backend\\ \hline
-    \textbf{Tareas realizadas} & 
-    \begin{itemize}
-        \item \textbf{Instalación de herramientas:} Node.js, Express, Prisma, PostgreSQL y Docker.
-        \item \textbf{Configuración de repositorio:} Creación del repositorio en GitHub para control de versiones del sistema.
-        \item \textbf{Servidor local:} Configuración de Node.js y Express para las comunicaciones con el backend a través de microservicios.
-        \item \textbf{Base de datos:} Configuración inicial de PostgreSQL con Prisma.
-        \item \textbf{Comunicación:} Creación de un enlace de Google Meet.
-    \end{itemize} \\ \hline
-    \textbf{Duración de la actividad} & 4 semanas \\ \hline
-    \textbf{Fecha de inicio} & 01/06/25 \\ \hline
-    \textbf{Fecha de culminación} & 30/06/25 \\ \hline
-    \textbf{Materiales utilizados} & 
-    \begin{itemize}
-        \item Laptop Huawei Matebook D16 
-        \item Visual Studio Code
-        \item Terminal de Windows
-        \item Google Meet
-        \item GitHub
-        \item postgreSQL
-        \item Prisma
-        \item TypeScript
-        \item Node.js
-        \item Express
-    \end{itemize} \\ \hline
-    \textbf{Resultados alcanzados} & Se programaron los endpoints de la API y se realizó el despliegue de la API en un servidor Docker local. \\ \hline
-    \textbf{Porcentaje de avance} & 100\% \\ \hline
-\end{longtable}
-\FloatBarrier
-
-\input{secciones/04-backend.tex}
-
-
-\subsection{Actividad 4: Desarrollo del Frontend (Interfaz de Usuario) }
-\begin{table}[!htb]
-    \centering
-    \caption{Resumen de la Actividad 4}
-    \begin{tabular}{|p{5cm}|p{10cm}|}
-        \hline
-        \textbf{Responsable de la actividad} & \PracticanteNombre \\ \hline
-        \textbf{Objetivo de la actividad} & Desarrollo del
-Frontend
-(Interfaz de
-Usuario) \\ \hline
-        \textbf{Tareas realizadas} &
-        \begin{itemize}
-            \item Crear componentes o descargar si es necesario de shadcn (barra de navegación, pie de página) y rutas para la redirección.
-            \item Crear la estructura de la pagina.
-            \item Crear la pagina principal.
-            \item Crear la interfaz de formularios
-            \item Crear la interfaz de Proyectos
-            \item Crear la interfaz de Usuarios
-            \item Crear los pasos para subir proyectos
-        \end{itemize} \\ \hline
-        \textbf{Duración de la actividad} & 4 semanas \\ \hline
-        \textbf{Fecha de inicio} & 01/07/25 \\ \hline
-        \textbf{Fecha de culminación} & 31/07/25 \\ \hline
-        \textbf{Materiales utilizados} &
-        \begin{itemize}
-            \item Laptop Huawei Matebook D16
-            \item Visual Studio Code
-            \item Terminal de Windows
-            \item Google Meet
-            \item GitHub
-        \end{itemize} \\ \hline
-        %\textbf{Detalles de la actividad (Fotos)} & [Incluye fotos relevantes aquí si las tienes] \\ \hline
-        \textbf{Resultados alcanzados} & Programación del frontend (interfaz de usuario) \\ \hline
-        \textbf{Porcentaje de avance} & 90\% \\ \hline
-    \end{tabular}
-    \label{tab:actividad3}
-\end{table}
-\FloatBarrier
-
-\subsubsection{Detalles de la actividad}
-Crear todo los componentes como esta en el diseño del figma y crear las rutas para la redirección, crear la estructura de la pagina, crear la pagina principal, crear la interfaz de formularios, crear la interfaz de Proyectos, crear la interfaz de Usuarios, crear los pasos para subir proyectos.
-
-
-\input{secciones/05-frontend.tex}
-
-
-\subsection{Actividad 5: Pruebas
-Unitarias y de
-Integración }
-\begin{table}[!htb]
-    \centering
-    \caption{Resumen de la Actividad 5}
-    \begin{tabular}{|p{5cm}|p{10cm}|}
-        \hline
-        \textbf{Responsable de la actividad} & \PracticanteNombre \\ \hline
-        \textbf{Objetivo de la actividad} & Pruebas
-Unitarias y de
-Integración \\ \hline
-        \textbf{Tareas realizadas} &
-        \begin{itemize}
-            \item Realizar pruebas de caja blanca
-            \item Realizar pruebas de caja navegador
-            \item Realizar pruebas de seguridad
-            \item Realizar pruebas de cifrado de datos.
-        \end{itemize} \\ \hline
-        \textbf{Duración de la actividad} & 2 semanas \\ \hline
-        \textbf{Fecha de inicio} & 01/08/25 \\ \hline
-        \textbf{Fecha de culminación} & 15/08/25 \\ \hline
-        \textbf{Materiales utilizados} &
-        \begin{itemize}
-            \item Laptop Huawei Matebook D16
-            \item Terminal de Windows
-            \item Navegador Chrome
-            \item GitHub
-        \end{itemize} \\ \hline
-        %\textbf{Detalles de la actividad (Fotos)} & [Incluye fotos relevantes aquí si las tienes] \\ \hline
-        \textbf{Resultados alcanzados} & Solo se pudo realizar la seguridad y cifrado de datos y pruebas de caja blanca \\ \hline
-        \textbf{Porcentaje de avance} & 40\% \\ \hline
-    \end{tabular}
-    \label{tab:actividad5}
-\end{table}
-\FloatBarrier
-
-\subsubsection{Detalles de la actividad}
-Se realizaron pruebas de tokens y de ataque por fuerza bruta; se protegieron el backend y el frontend, y se verificó el uso correcto de los tokens.
-
-
-
-\input{secciones/06-pruebas.tex}
 
 \section{Conclusiones}
 El trabajo se desarrolló mediante un flujo iterativo e incremental por funcionalidad: se diseñó cada propuesta, se presentó al supervisor o encargado de la oficina, se implementó y se ajustó con base en la retroalimentación. Este flujo es compatible con prácticas asociadas a Scrum y XP, sin implicar la adopción completa de un marco formal. Se completaron al 100\% los requerimientos y el backend; el diseño y el frontend alcanzaron un 90\%, y las pruebas un 40\%. Los resultados muestran un sistema funcional y evidencian la necesidad de completar los componentes pendientes.

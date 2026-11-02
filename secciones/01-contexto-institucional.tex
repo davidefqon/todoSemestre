@@ -1,35 +1,62 @@
 
 \section{Parte Informativa}
 \subsection{Datos del practicante}
-\begin{table}[h]
-    \begin{tabular}{p{5cm} p{7cm} }
-        Apellidos y nombres &: \PracticanteNombre  \\
-        Código              &: \PracticanteCodigo   \\
-        Especialidad de prácticas    &: \PracticanteEspecialidad  \\
-        Modalidad de prácticas    &: Presencial  \\ 
-        Facultad    &: \PracticanteFacultad  \\
-        Promoción    &: \PracticantePromocion  \\
-    \end{tabular}
+\begin{table}[htb!]
+    \centering
+    \renewcommand{\arraystretch}{1.3}
+
+    \begin{tabularx}{\linewidth}{
+        @{}
+        >{\raggedright\arraybackslash}p{0.34\linewidth}
+        @{\hspace{0.5em}:\hspace{0.5em}}
+        >{\raggedright\arraybackslash}X
+        @{}
+    }
+        Apellidos y nombres & \PracticanteNombre \\
+        Código & \PracticanteCodigo \\
+        Especialidad de prácticas & \PracticanteEspecialidad \\
+        Modalidad de prácticas & Presencial \\
+        Facultad & \PracticanteFacultad \\
+        Promoción & \PracticantePromocion \\
+    \end{tabularx}
 \end{table}
+
+% Centro de prácticas
 \subsection{Centro de practicas}
-\begin{table}[h]
-    \begin{tabular}{p{5cm} p{10cm} }
-        Nombre de la entidad &: \InstitucionNombre \\
-        Dependencia/Oficina              &: \InstitucionOficina   \\
-        Jefe inmediato    &: \InstitucionJefa  \\
-        Modalidad de prácticas    &: Presencial  \\ 
-    \end{tabular}
+\begin{table}[htb!]
+    \centering
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabularx}{\linewidth}{
+        @{}
+        >{\raggedright\arraybackslash}p{0.34\linewidth}
+        @{\hspace{0.5em}:\hspace{0.5em}}
+        >{\raggedright\arraybackslash}X
+        @{}
+    }
+        Nombre de la entidad & \InstitucionNombre \\
+        Dependencia/Oficina & \InstitucionOficina \\
+        Jefe inmediato & \InstitucionJefa \\
+        Modalidad de prácticas & Presencial \\
+    \end{tabularx}
 \end{table}
 \subsection{Periodo de prácticas}
-\begin{table}[h]
-    \begin{tabular}{p{5cm} p{10cm} }
-        Fecha de inicio &: \FechaInicio  \\
-        Fecha de Culminación              &: \FechaFin    \\
-        Duración    &: 4 meses  \\
-    \end{tabular}
+\begin{table}[htb!]
+    \centering
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabularx}{\linewidth}{
+        @{}
+        >{\raggedright\arraybackslash}p{0.34\linewidth}
+        @{\hspace{0.5em}:\hspace{0.5em}}
+        >{\raggedright\arraybackslash}X
+        @{}
+    }
+        Fecha de inicio & \FechaInicio \\
+        Fecha de Culminación & \FechaFin \\
+        Duración & 4 meses \\
+    \end{tabularx}
 \end{table}
 \subsection{Docente de prácticas}
-\DocenteNombre
+\Precidente
 
 \newpage
 \section{Introducción}
@@ -58,13 +85,20 @@ Oficina: \InstitucionNombre
 \subsection{Teléfono, fax, página web, correo electrónico}
 \href{\SitioWeb}{\SitioWeb}
 
-\begin{table}[h]
-    \begin{tabular}{p{5cm} p{10cm} }
-        \TelefonoMelissa &: Ing Melissa (Encargada del proyecto).\\
-        \TelefonoJefa &: \InstitucionJefa (Directora de la oficina DPSEC).\\
-        \TelefonoOficina &: Oficina DPSEC (secretaria)
-        
-    \end{tabular}
+\begin{table}[htb!]
+    \centering
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabularx}{\linewidth}{
+        @{}
+        >{\raggedright\arraybackslash}p{0.34\linewidth}
+        @{\hspace{0.5em}:\hspace{0.5em}}
+        >{\raggedright\arraybackslash}X
+        @{}
+    }
+        \TelefonoMelissa & Ing Melissa (Encargada del proyecto). \\
+        \TelefonoJefa & \InstitucionJefa (Directora de la oficina DPSEC). \\
+        \TelefonoOficina & Oficina DPSEC (secretaria) \\
+    \end{tabularx}
 \end{table}
 
 \subsection{Visión}	
